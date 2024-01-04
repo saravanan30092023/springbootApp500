@@ -36,6 +36,23 @@ pipeline {
                             sh "mvn package -DskipTests"
                     }
         }
+
+       stage('Build Docker Image'){
+                    script {
+                          dockerImage=docker.build("jagadeeshb1585/fullstackapp500:${env.BUILD_NUMBER}")
+                    }
+        }
+}
+       stage('Push Docker Image'){
+                  steps{
+                    script{
+                          docker.withRegistry('https://registry.hub.docker.com','dockercred'){
+                          dockerImage.push()
+                       }
+                   }
+           }
+       }
+
     }
     post {
           always{
