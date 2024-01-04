@@ -2,7 +2,7 @@ pipeline {
     agent any
         environment {
         mavenHome = tool 'mavenjenkins1'
-        dockerHome = tool 'dockerjenkins'
+        dockerHome = tool 'dockerjenkins1'
         PATH= "${mavenHome}/bin:${dockerHome}/bin:${PATH}"
        }
     stages {
