@@ -12,6 +12,7 @@ pipeline {
                             echo "$env.BUILD_NUMBER"
                             echo "$env.BUILD_ID"
                             echo "$env.BUILD_URL"
+                            echo "welcome"
 
 
 
