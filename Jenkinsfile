@@ -38,10 +38,12 @@ pipeline {
         }
 
        stage('Build Docker Image'){
+                    steps{
                     script {
                           dockerImage=docker.build("jagadeeshb1585/fullstackapp500:${env.BUILD_NUMBER}")
                     }
         }
+       }
 
        stage('Push Docker Image'){
                   steps{
