@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringbootAwsDeployApplication {
 
 	public static void main(String[] args) {
+		System.out.println("hai");
 		SpringApplication.run(SpringbootAwsDeployApplication.class, args);
 	}
 
