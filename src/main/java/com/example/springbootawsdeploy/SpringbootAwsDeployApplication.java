@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringbootAwsDeployApplication {
 
 	public static void main(String[] args) {
-		System.out.println("hai welcome to india niit ");
+		System.out.println("hai welcome to india niit ltd");
 		SpringApplication.run(SpringbootAwsDeployApplication.class, args);
 	}
 
