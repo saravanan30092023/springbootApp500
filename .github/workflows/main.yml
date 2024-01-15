@@ -35,6 +35,11 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t jagadeeshb1585/jagadeeshb1585/githubactions:latest .
-
+    
     - name: Push to Docker Hub
-      run: docker push jagadeeshb1585/jagadeeshb1585/githubactions:latest
+      run: docker push jagadeeshb1585/jagadeeshb1585/githubactions:latest || echo "Docker Push Failed"
+
+    - name: Logout from Docker Hub
+      run: docker logout
+    # - name: Push to Docker Hub
+    #   run: docker push jagadeeshb1585/jagadeeshb1585/githubactions:latest
