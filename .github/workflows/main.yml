@@ -35,9 +35,15 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t jagadeeshb1585/githubactions:latest .
+
+    - name: Tag Docker image
+      run: docker tag jagadeeshb1585/githubactions:latest jagadeeshb1585/githubactions:latest:1.0.0
+      # Replace "1.0.0" with the desired version or tag for your Docker image.
+  
     
     - name: Push to Docker Hub
-      run: docker push jagadeeshb1585/githubactions:latest || echo "Docker Push Failed"
+      run: docker push jagadeeshb1585/githubactions:latest && docker push jagadeeshb1585/githubactions:latest:1.0.0 || echo "Docker Push Failed"
+      # run: docker push jagadeeshb1585/githubactions:latest || echo "Docker Push Failed"
 
     - name: Logout from Docker Hub
       run: docker logout
