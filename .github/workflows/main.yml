@@ -42,7 +42,7 @@ jobs:
   
     
     - name: Push to Docker Hub
-      run: docker push jagadeeshb1585/githubactions:latest && docker push jagadeeshb1585/githubactions:1.0.0 || echo "Docker Push Failed"
+      run: docker push jagadeeshb1585/githubactions:latest || docker push jagadeeshb1585/githubactions:1.0.0 || echo "Docker Push Failed"
       # run: docker push jagadeeshb1585/githubactions:latest || echo "Docker Push Failed"
 
     - name: Logout from Docker Hub
