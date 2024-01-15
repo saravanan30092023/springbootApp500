@@ -37,7 +37,7 @@ jobs:
       run: docker build -t jagadeeshb1585/githubactions:latest .
 
     - name: Tag Docker image
-      run: docker tag jagadeeshb1585/githubactions:latest jagadeeshb1585/githubactions:latest:1.0.0
+      run: docker tag jagadeeshb1585/githubactions:latest jagadeeshb1585/githubactions:1.0.0
       # Replace "1.0.0" with the desired version or tag for your Docker image.
   
     
